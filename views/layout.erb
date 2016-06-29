@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<div class="notice">
+		<%= flash[:notice] if flash[:notice] %>
+	</div>
+
+	<div class="error">
+		<%= flash[:error] if flash[:error] %>
+	</div>
+
+	<%=yield %>
+
+</body>
+</html>
