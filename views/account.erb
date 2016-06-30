@@ -15,6 +15,10 @@ FIELD: <%= @profile.field%><br/>
 BIO: <%= @profile.bio%><br/>
 </div>
 
+<form method="post" action="/delete_account">
+	<button id="destroy">Delete Account </button>
+</form>
+	
 <!-- followeres -->
 <div id="followers">
 	FOLLOWERS

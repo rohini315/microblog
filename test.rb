@@ -150,4 +150,10 @@ def current_post
 	end
 end
 
+post "/delete_account" do
+	flash[:notice]="You deleted your account!"
+	current_user.destroy
+	redirect to ('/')
+end
+
 
