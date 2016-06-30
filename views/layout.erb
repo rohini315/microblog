@@ -3,6 +3,18 @@
 <head>
 </head>
 <body>
+	<nav>
+		<ul>
+			<li><a href="/debug">debug</a></li>
+			<li><a href="/profile">Profile</a></li>
+			<li><a href="/account">Account</a></li>
+			<%if @user%>
+				<li id="log_in"><a href="/">log out</a></li>
+			<%else%>
+				<li id="log_in"><a href="/">log in</a></li>
+			<%end%>
+		</ul>
+	</nav>
 	<div class="notice">
 		<%= flash[:notice] if flash[:notice] %>
 	</div>
@@ -12,6 +24,11 @@
 	</div>
 
 	<%=yield %>
+	
+	<footer>
+		<span>Project Connect &copy; 2016</span>
+		<span>contact | info@projectconnect.com | 1-800-000-0000</span>
+	</footer>
 
 </body>
 </html>

@@ -1,4 +1,56 @@
-<div>
-	<%=@user.name %>
-
+<div class="topbar">
+	<h1><%=@user.name %>'s Profile</h1>
 </div>
+
+<%if @profile %>	
+	<div id="current_profile">
+		<p> city : <%= @profile.city%></p>
+		<p> field : <%= @profile.field%></p>
+		<p> Bio : <%= @profile.bio%></p>
+	</div>
+<%end%>
+
+<%if @profile %>
+	<div id="change_profile">
+		<form method="POST" action="/update_profile">
+			<h2>to change your profile</h2>	
+			<label>CITY</label>
+			<input type="text" name="city" placeholder="city">
+
+			<label>YOUR FIELD OF WORK</label>
+			<input type="text" name="field" placeholder="enter your fields">
+
+			<label>BIO</label>
+			<input type="text" name="bio" placeholder="enter your bio">
+			
+			<input type="submit" name="submit">
+		</form>
+
+		<form method="POST" action="/update_password">
+			<h2>to change your password</h2>
+			<label>CURRENT PASSWORD</label>
+			<input type="password" name="c_password" placeholder="enter your current password">
+
+			<label>NEW PASSWORD</label>
+			<input type="password" name="n_password" placeholder="enter your new password">
+
+			<input type="submit" name="submit">
+		</form>
+	</div>
+<%else%>
+	<div id="create_profile">
+	<form method="POST" action="/create_profile">
+		<h2>create your profile</h2>	
+		<label>CITY</label>
+		<input type="text" name="city" placeholder="city">
+
+		<label>YOUR FIELD OF WORK</label>
+		<input type="text" name="field" placeholder="enter your fields">
+
+		<label>BIO</label>
+		<input type="text" name="bio" placeholder="enter your bio">
+		
+		<input type="submit" name="submit">
+	</form>
+</div>
+<%end%>
