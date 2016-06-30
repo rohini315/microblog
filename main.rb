@@ -128,3 +128,4 @@ def current_profile
 		@current_profile=Profile.find_by(user_id: session[:user_id])
 	end
 end
+
