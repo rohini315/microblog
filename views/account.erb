@@ -1,0 +1,48 @@
+<div class="topbar">
+	<h1>hello <%=@user.username %></h1>
+</div>
+<!-- test -->
+<div>
+USER_ID:  <%= @user.id%><br/>
+NAME: <%= @user.name%> <br/>
+PHONE: <%= @user.phone%> <br/>
+PASSWORD: <%= @user.password%><br/>
+PROFILE_USER_ID:  <%= @profile.user_id%><br/>
+CITY:  <%= @profile.city%><br/>
+FIELD: <%= @profile.field%><br/>
+BIO: <%= @profile.bio%><br/>
+</div>
+
+<!-- followeres -->
+<div id="followers">
+	FOLLOWERS
+</div>
+<div id="following">
+	FOLLOWING
+</div>
+
+<!-- where you write/create post -->
+<div class="post_create" id="post">
+	<form method="post" action="/post_create">
+		<div class="post_text">
+	        <label for="msg">Message:</label>
+	        <textarea id="post" name="user_message"></textarea>
+	    </div>
+	    <div id="post_toobox">
+	    	<span id="follow">
+	    		
+	    	</span>
+	    	<span class="post_counter">
+	    		<!-- this is where letter counter shows : future JS -->
+	    	</span>
+	    	<button>
+	    		<span>post</span>
+	    	</button>
+	    </div>
+    </form>	
+</div>
+
+<!-- where privious posts shows -->
+<div class="posts">
+	POSTS
+</div>
