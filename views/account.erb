@@ -27,6 +27,13 @@ BIO: <%= @profile.bio%><br/>
 	FOLLOWING
 </div>
 
+<!-- SHOWING LASTest 10 USER LINK -->
+<ul>
+<%@users.last(10).each do |user|%>
+	<li><a href="/friend/<%= user[:id] %>"><%= user.username%></a></li>
+<%end%>
+</ul>
+
 <!-- where you write/create post -->
 <div class="post_create" id="post">
 	<form method="post" action="/post_create">

@@ -18,7 +18,7 @@ get "/debug" do
 	@post = current_post
 	erb :debug	
 end
-
+###################### INDEX PAGE ###################### 
 post "/sign-in" do
 	@user=User.where(username: params[:username]).first
 	if @user && @user.password==params[:password]
@@ -50,6 +50,8 @@ get "/log-out" do
 	session[:user_id] = nil
 	redirect "/"
 end
+
+###################### PROFILE PAGE ###################### 
 
 get "/profile" do
 	@user = current_user
@@ -107,12 +109,21 @@ post "/update_password" do
 	end
 end
 
+###################### ACCOUNT PAGE ###################### 
+
 get "/account" do
+	@users = User.all
 	@user = current_user
 	@profile = current_profile
 	# @profile = Profile.find_by(user_id: session[:user_id])
 	erb :account
 
+end
+
+post "/delete_account" do
+	flash[:notice]="You deleted your account!"
+	current_user.destroy
+	redirect to ('/')
 end
 
 post "/post_create" do
@@ -127,6 +138,15 @@ post "/post_create" do
 	puts post.inspect
 	redirect "/account"
 end
+
+get "/friend/:id" do
+	@user = User.find(params[:id])
+	@profile = Profile.find_by(user_id: params[:id])
+	erb :friends
+end
+
+
+###################### FUNCTION ###################### 
 
 def current_user
 	if session[:user_id]
@@ -150,11 +170,6 @@ def current_post
 	end
 end
 
-post "/delete_account" do
-	flash[:notice]="You deleted your account!"
-	current_user.destroy
-	redirect to ('/')
-end
 
 
 
