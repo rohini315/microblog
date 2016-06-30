@@ -1,3 +1,5 @@
+
+
 <div class="topbar">
 	<h1>hello <%=@user.username %></h1>
 </div>
@@ -26,7 +28,7 @@ BIO: <%= @profile.bio%><br/>
 	<form method="post" action="/post_create">
 		<div class="post_text">
 	        <label for="msg">Message:</label>
-	        <textarea id="post" name="user_message"></textarea>
+	        <textarea id="post" name="post_text" maxlength="150"></textarea>
 	    </div>
 	    <div id="post_toobox">
 	    	<span id="follow">
@@ -35,7 +37,11 @@ BIO: <%= @profile.bio%><br/>
 	    	<span class="post_counter">
 	    		<!-- this is where letter counter shows : future JS -->
 	    	</span>
-	    	<button>
+	    	<span id ="post_time">
+	    		<!-- this is where letter counter shows : future JS -->
+	    		possible time
+	    	</span>
+	    	<button onclick="getTime(event)">
 	    		<span>post</span>
 	    	</button>
 	    </div>
@@ -45,4 +51,23 @@ BIO: <%= @profile.bio%><br/>
 <!-- where privious posts shows -->
 <div class="posts">
 	POSTS
+	<% if @user.posts %>
+		<div>
+			<% @user.posts.reverse_each.each do |post| %>
+				<%= post.user_id %> 
+				<%= post.post_text %>    
+				<%= post.date %> <br/>
+			<%end%>
+		</div>
+	<%end%>
+
 </div>
+
+<script type="text/javascript">
+	var day;
+	function getTime(event){
+		day = new Date();
+		console.log(day);
+		document.getElementById("post_time").innerHTML = day;
+	}
+</script>

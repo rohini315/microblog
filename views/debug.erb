@@ -5,3 +5,10 @@
 	<%= user.name %>  
 	<%= user.phone %><br/>
 <% end %>
+
+
+<%@posts.each do |elements|%>
+	<%= post.user_id %> 
+	<%= post.post_text %>    
+	<%= post.date %> <br/>
+<%end%>

@@ -15,6 +15,7 @@ get "/debug" do
 	@users = User.all
 	@user = current_user
 	@profile = current_profile
+	@post = current_post
 	erb :debug	
 end
 
@@ -114,6 +115,19 @@ get "/account" do
 
 end
 
+post "/post_create" do
+	# @post = current_user.posts.last
+	post = Post.create(
+		user_id: current_user.id,
+		post_text: params[:post_text],
+		date: Time.now
+		)
+
+	# @current_post=Post.find_by(user_id: session[:user_id])
+	puts post.inspect
+	redirect "/account"
+end
+
 def current_user
 	if session[:user_id]
 		@current_user=User.find(session[:user_id])
@@ -128,3 +142,10 @@ def current_profile
 		@current_profile=Profile.find_by(user_id: session[:user_id])
 	end
 end
+
+def current_post
+	if session[:user_id]
+		@current_post=Post.find_by(user_id: session[:user_id])
+	end
+end
+
