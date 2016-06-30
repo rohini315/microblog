@@ -1,0 +1,24 @@
+<div class="topbar">
+	<h1>hello <%=@user.username %></h1>
+</div>
+<!-- test -->
+<div>
+USER_ID:  <%= @user.id%><br/>
+NAME: <%= @user.name%> <br/>
+PHONE: <%= @user.phone%> <br/>
+PASSWORD: <%= @user.password%><br/>
+</div>
+<!-- where privious posts shows -->
+<div class="posts">
+	POSTS
+	<% if @user.posts %>
+		<div>
+			<% @user.posts.reverse_each.each do |post| %>
+				<%= post.user_id %> 
+				<%= post.post_text %>    
+				<%= post.date %> <br/>
+			<%end%>
+		</div>
+	<%end%>
+
+</div>
