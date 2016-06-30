@@ -30,6 +30,26 @@ post "/sign-in" do
 	end
 end
 
+post "/sign-up" do
+	User.create(
+	username: params[:username],
+	password: params[:password],
+	phone: params[:phone],
+	name: params[:name]
+	)
+	session[:user_id] = User.last.id
+	puts @user
+
+	flash[:notice]="You have signed up"
+	
+	redirect "/profile"
+end
+
+get "/log-out" do
+	session[:user_id] = nil
+	redirect "/"
+end
+
 get "/profile" do
 	@user = current_user
 	@profile = current_profile
@@ -94,23 +114,14 @@ get "/account" do
 
 end
 
-post "/sign-up" do
-	User.create(
-	username: params[:username],
-	password: params[:password],
-	phone: params[:phone],
-	name: params[:name]
-	)
-	flash[:notice]="You have signed up"
-
-	redirect "/profile"
-end
-
 def current_user
 	if session[:user_id]
 		@current_user=User.find(session[:user_id])
+	else
+		@current_user = nil
 	end
 end
+
 
 def current_profile
 	if session[:user_id]
