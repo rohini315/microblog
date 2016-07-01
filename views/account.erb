@@ -63,13 +63,26 @@ BIO: <%= @profile.bio%><br/>
 <div class="posts">
 	POSTS
 	<% if @user.posts %>
-		<div>
+		<div class="posts indivisual">
 			<% @user.posts.reverse_each.each do |post| %>
-				<%= post.user_id %> 
-				<%= post.post_text %>    
-				<%= post.date %> <br/>
-			<%end%>
+				<div class="posts text">
+					
+						<%= post.user_id %> 
+						<%= post.post_text %><br/>
+					
+				</div>
+				<div id="post_toobox">
+			    	<span id ="post_time">
+			    		<!-- this is where letter counter shows : future JS -->
+			    		created at <%= post.date %> 
+			    	</span>
+			    	<button>
+			    		<a href="/delete_post/<%= post[:id] %>"> delete </a>
+			    	</button>
+		    	</div>
+		    <%end%>
 		</div>
+
 	<%end%>
 
 </div>

@@ -145,6 +145,13 @@ get "/friend/:id" do
 	erb :friends
 end
 
+get "/delete_post/:id" do
+	post = Post.find(params[:id])
+	post.destroy
+
+	redirect "/account"
+end
+
 
 ###################### FUNCTION ###################### 
 
