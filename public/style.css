@@ -159,7 +159,7 @@ h2 {
 
 .topbar{
 	text-transform: uppercase;
-	height: 4em;
+	height: 100%;
     background-color: white;
 }
 
@@ -248,7 +248,11 @@ h2 {
     padding: 30px;
     margin-bottom: 20px;
 }
+/*===================================== PROFILE END==========================*/
 
+/*===================================== ACCOUNT START==========================*/
+
+/*===================================== ACCOUNT END==========================*/
 
 
 

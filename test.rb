@@ -154,6 +154,10 @@ end
 
 
 ###################### FUNCTION ###################### 
+def current_friend(user, profile )
+	@user = user
+	@profile = profile
+end
 
 def current_user
 	if session[:user_id]

@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css">
-	
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 	<div class="bg-img"></div>
 	<nav id="nav">
 		<ul>
+			<%if @user%>
 			<li><a href="/debug">debug</a></li>
 			<li><a href="/profile">Profile</a></li>
 			<li><a href="/account">Account</a></li>
-			<%if @user%>
+			
 				<li id="log_out"><a href="/log-out">Log Out</a></li>
 			<%else%>
-				<li id="log_in"><a href="/">Log In</a></li>
+				<!-- <li id="log_in"><a href="/">Log In</a></li> -->
 
 			<%end%>
 		</ul>

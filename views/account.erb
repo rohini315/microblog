@@ -2,37 +2,40 @@
 
 <div class="topbar">
 	<h1>hello <%=@user.username %></h1>
-</div>
-<!-- test -->
-<div>
-USER_ID:  <%= @user.id%><br/>
-NAME: <%= @user.name%> <br/>
-PHONE: <%= @user.phone%> <br/>
-PASSWORD: <%= @user.password%><br/>
-PROFILE_USER_ID:  <%= @profile.user_id%><br/>
-CITY:  <%= @profile.city%><br/>
-FIELD: <%= @profile.field%><br/>
-BIO: <%= @profile.bio%><br/>
+	<div id="account_info_div">
+		<div id="account_info">
+			<p>NAME: <%= @user.name%></p>
+			<p>PHONE: <%= @user.phone%></p>
+		</div>
+		<span>CITY:  <%= @profile.city%></span>
+		<span>FIELD: <%= @profile.field%></span>
+		<span>BIO: <%= @profile.bio%></span>
+	</div>
+	<form method="post" action="/delete_account">
+		<button id="destroy">
+			Delete Account 
+		</button>
+	</form>
 </div>
 
-<form method="post" action="/delete_account">
-	<button id="destroy">Delete Account </button>
-</form>
+
 	
 <!-- followeres -->
-<div id="followers">
+<!-- <div id="followers">
 	FOLLOWERS
 </div>
 <div id="following">
 	FOLLOWING
-</div>
+</div> -->
 
 <!-- SHOWING LASTest 10 USER LINK -->
-<ul>
-<%@users.last(10).each do |user|%>
-	<li><a href="/friend/<%= user[:id] %>"><%= user.username%></a></li>
-<%end%>
-</ul>
+<div id="lastest_ten_user">
+	<ul>
+		<%@users.last(10).each do |user|%>
+			<li><a href="/friend/<%= user[:id] %>"><%= user.username%></a></li>
+		<%end%>
+	</ul>
+</div>
 
 <!-- where you write/create post -->
 <div class="post_create" id="post">
