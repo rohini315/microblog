@@ -13,17 +13,17 @@
 <%if @profile %>
 	<div id="change_profile">
 		<form method="POST" action="/update_profile">
-			<h2>to change your profile</h2>	
-			<label>CITY</label>
-			<input type="text" name="city" placeholder="city">
+			<h2>CHANGE YOUR PROFILE</h2>	
+		
+			<input type="text" id="city" name="city" placeholder="CITY"><br>
 
-			<label>YOUR FIELD OF WORK</label>
-			<input type="text" name="field" placeholder="enter your fields">
+			<label>FIELD</label>
+			<input type="text" id="field" name="field" placeholder="FIELD"></br>
 
 			<label>BIO</label>
-			<input type="text" name="bio" placeholder="enter your bio">
+			<input type="text" id="bio" name="bio" placeholder="BIO">
 			
-			<input type="submit" name="submit">
+			<input type="submit" class=button name="submit">
 		</form>
 
 		<form method="POST" action="/update_password">
