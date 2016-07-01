@@ -50,14 +50,19 @@ body {
 	margin-bottom: 20px;
 }
 
-.sign_in{
+#wrapper{
+	width: 815px;
+	margin: 0 auto;
+}
+
+.sign_in, .sign_up{
 	width: 300px;
 	height: 320px;
 	border-style: solid;
 	border-width: 4px;
 	border-color: white;
 	text-align: center;
-	margin-left: 200px;
+	margin: 0 50px;
 	margin-top: 100px;
 	float: left;
 
@@ -89,10 +94,10 @@ body {
 	border-style: solid;
 	border-width: 2px;
 	margin: 0 auto;
-	padding: 5px;
+	padding: 10px;
 	text-align: center;
 	margin-bottom: 5px;
-
+	width: 138px;
 }
 
 h2 {
@@ -100,17 +105,6 @@ h2 {
 	margin-top: 10px;
 }
 
-.sign_up{
-	width: 300px;
-	height: 320px;
-	border-style: solid;
-	border-width: 4px;
-	border-color: white;
-	text-align: center;
-	float: left;
-	margin-top: 100px;
-	margin-left: 200px;
-}
 
 #name{
 	border-background:none;
