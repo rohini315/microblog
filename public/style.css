@@ -6,7 +6,8 @@ body {
 	font-family:Cabin,sans-serif;
 	  padding: 0;
 	  margin:0;
-	  background-image: url("newbg.jpg");
+	  /*background-image: url("newbg.jpg");*/
+	  background: linear-gradient(-120deg, #3d18fb 0%, #cea2df 51%, #fecdd3 75%);
 	  background-repeat: no-repeat;
 	  background-position: center center;
 	  background-attachment: fixed;
@@ -156,6 +157,16 @@ h2 {
 }
 /*==================================END OF INDEX==========================*/
 
+.topbar{
+	text-transform: uppercase;
+	height: 4em;
+    background-color: white;
+}
+
+.topbar h1{
+	text-align: center;
+    padding: 0.4em;
+}
 
 /*===================================== PROFILE PG==========================*/
 
@@ -217,7 +228,26 @@ h2 {
 	margin-bottom: 5px;
 }
 
+#current_profile{
+	width: 500px;
+    margin: 20px auto;
+    text-transform: uppercase;
+    border: 3px solid;
+    padding: 30px;
+}
 
+#change_profile{
+	width: 566px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+#change_profile form{
+	text-transform: uppercase;
+    border: 3px solid;
+    padding: 30px;
+    margin-bottom: 20px;
+}
 
 
 
