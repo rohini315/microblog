@@ -14,43 +14,43 @@
 	<div id="change_profile">
 		<form method="POST" action="/update_profile">
 			<h2>CHANGE YOUR PROFILE</h2>	
-		
-			<input type="text" id="city" name="city" placeholder="CITY"><br>
+			
+			<input type="text" id="city" name="city" placeholder="CITY">
 
-			<label>FIELD</label>
+		
 			<input type="text" id="field" name="field" placeholder="FIELD"></br>
 
-			<label>BIO</label>
-			<input type="text" id="bio" name="bio" placeholder="BIO">
 			
-			<input type="submit" class=button name="submit">
+			<input type="text" id="bio" name="bio" placeholder="BIO"><br>
+			
+			<input type="submit" class=button_2 name="submit">
 		</form>
 
 		<form method="POST" action="/update_password">
-			<h2>to change your password</h2>
-			<label>CURRENT PASSWORD</label>
-			<input type="password" name="c_password" placeholder="enter your current password">
+			<h2> change your password</h2>
+		
+			<input type="password" name="c_password" id="c_password" placeholder="CURRENT PASSWORD"><br>
 
-			<label>NEW PASSWORD</label>
-			<input type="password" name="n_password" placeholder="enter your new password">
+			
+			<input type="password" name="n_password" id="n_password" placeholder="NEW PASSWORD"><br>
 
-			<input type="submit" name="submit">
+			<input type="submit" name="submit" id="button_3">
 		</form>
 	</div>
 <%else%>
 	<div id="create_profile">
 	<form method="POST" action="/create_profile">
 		<h2>create your profile</h2>	
-		<label>CITY</label>
-		<input type="text" name="city" placeholder="city">
-
-		<label>YOUR FIELD OF WORK</label>
-		<input type="text" name="field" placeholder="enter your fields">
-
-		<label>BIO</label>
-		<input type="text" name="bio" placeholder="enter your bio">
 		
-		<input type="submit" name="submit">
+		<input type="text" id="city" name="city" placeholder="CITY">
+
+		
+		<input type="text" id="field" name="field" placeholder="FIELD">
+
+		
+		<input type="text" id="bio" name="bio" placeholder="BIO"> <br>
+		
+		<input type="submit" name="submit" id="button_3">
 	</form>
 </div>
 <%end%>

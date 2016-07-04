@@ -74,9 +74,9 @@ body {
 	border-width: 2px;
 	border-color: white;
 	margin: 0 auto;
-	padding: 10px;
+	padding: 5px;
 	text-align: center;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
 }
 
 #password{
@@ -85,9 +85,9 @@ body {
 	border-width: 2px;
 	border-color: white;
 	margin: 0 auto;
-	padding: 10px;
+	padding: 5px;
 	text-align: center;
-	margin-bottom: 5px;
+	margin-bottom: 11px;
 }
 
 .button{
@@ -96,8 +96,12 @@ body {
 	margin: 0 auto;
 	padding: 10px;
 	text-align: center;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
 	width: 138px;
+}
+
+#log{
+	margin-top: 82px;
 }
 
 h2 {
@@ -112,9 +116,9 @@ h2 {
 	border-width: 2px;
 	border-color: white;
 	margin: 0 auto;
-	padding: 10px;
+	padding: 5px;
 	text-align: center;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
 }
 
 #phone{
@@ -123,9 +127,9 @@ h2 {
 	border-width: 2px;
 	border-color: white;
 	margin: 0 auto;
-	padding: 10px;
+	padding: 5px;
 	text-align: center;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
 }
 
 #username_2{
@@ -134,9 +138,9 @@ h2 {
 	border-width: 2px;
 	border-color: white;
 	margin: 0 auto;
-	padding: 10px;
+	padding: 5px;
 	text-align: center;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
 }
 
 #password_2{
@@ -145,21 +149,26 @@ h2 {
 	border-width: 2px;
 	border-color: white;
 	margin: 0 auto;
-	padding: 10px;
+	padding: 5px;
 	text-align: center;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
 }
 /*==================================END OF INDEX==========================*/
 
-.topbar{
+.topbar {
 	text-transform: uppercase;
 	height: 4em;
-    background-color: white;
+    background-color: none;
+    width: 400px;
+    margin: 0 auto;
+
 }
 
 .topbar h1{
 	text-align: center;
     padding: 0.4em;
+    width: 400px;
+
 }
 
 /*===================================== PROFILE PG==========================*/
@@ -176,17 +185,21 @@ h2 {
 	font-size: 20px;
 }
 
+
 #create_profile {
-	width: 350px;
-	height: 320px;
-	border-style: solid;
-	border-width: 4px;
-	border-color: white;
-	text-align: center;
-	margin-left: 200px;
-	margin-top: 100px;
-	float: left;
+	width: 520px;
+	margin: 20px auto;
+    text-transform: uppercase;
+    border: 3px solid;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
 }
+
+#create_profile form {
+	margin: 0 auto;
+}
+
 
 #city{
 	border-background:none;
@@ -197,6 +210,7 @@ h2 {
 	padding: 10px;
 	text-align: center;
 	margin-bottom: 5px;
+	margin-right:10px;
 
 }
 
@@ -220,20 +234,23 @@ h2 {
 	padding: 10px;
 	text-align: center;
 	margin-bottom: 5px;
+	width:265px;
+	height:100px;
 }
 
 #current_profile{
-	width: 500px;
+	width: 520px;
     margin: 20px auto;
     text-transform: uppercase;
     border: 3px solid;
-    padding: 30px;
+    padding: 20px;
 }
 
 #change_profile{
 	width: 566px;
     margin: 0 auto;
     text-transform: uppercase;
+    text-align: center;
 }
 
 #change_profile form{
@@ -241,7 +258,73 @@ h2 {
     border: 3px solid;
     padding: 30px;
     margin-bottom: 20px;
+    height: 280px;
 }
+
+#city{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#field {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#bio{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.button_2{
+	margin-top: 20px;
+	border-style: solid;
+	border-width: 2px;
+	margin: 0 auto;
+	padding: 10px;
+	text-align: center;
+	margin-bottom: 15px;
+	width: 138px;
+}
+
+#c_password {
+	margin: 0 auto;
+	border-background:none;
+	border-style: solid;
+	border-width: 2px;
+	border-color: white;
+	padding: 10px;
+	text-align: center;
+	width:120px;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+#n_password {
+	margin: 0 auto;
+	border-background:none;
+	border-style: solid;
+	border-width: 2px;
+	border-color: white;
+	padding: 10px;
+	text-align: center;
+	width:120px;
+}
+
+#button_3 {
+	margin-top: 10px;
+	border-style: solid;
+	border-width: 2px;
+	margin: 0 auto;
+	padding: 10px;
+	text-align: center;
+	margin-top: 15px;
+	width: 138px;
+
+}
+
+
+
 /*===================================== PROFILE END==========================*/
 
 /*===================================== ACCOUNT START==========================*/
