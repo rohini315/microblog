@@ -11,13 +11,6 @@ get "/" do
 	erb :index
 end
 
-get "/debug" do
-	@users = User.all
-	@user = current_user
-	@profile = current_profile
-	@post = current_post
-	erb :debug	
-end
 ###################### INDEX PAGE ###################### 
 post "/sign-in" do
 	@user=User.where(username: params[:username]).first
@@ -115,7 +108,6 @@ get "/account" do
 	@users = User.all
 	@user = current_user
 	@profile = current_profile
-	# @profile = Profile.find_by(user_id: session[:user_id])
 	erb :account, layout:false 
 
 end
@@ -127,30 +119,15 @@ post "/delete_account" do
 end
 
 post "/post_create" do
-	# @post = current_user.posts.last
 	post = Post.create(
 		user_id: current_user.id,
 		post_text: params[:post_text],
 		date: Time.now
 		)
-
-	# @current_post=Post.find_by(user_id: session[:user_id])
 	puts post.inspect
 	redirect "/account"
 end
 
-# post "/post_create/:id" do
-# 	# @post = current_user.posts.last
-# 	post = Post.create(
-# 		user_id: params[:id],
-# 		post_text: params[:post_text],
-# 		date: Time.now
-# 		)
-
-# 	# @current_post=Post.find_by(user_id: session[:user_id])
-# 	puts post.inspect
-# 	redirect "/account"
-# end
 
 get "/friend/:id" do
 	@user = User.find(params[:id])
