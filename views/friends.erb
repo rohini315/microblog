@@ -1,24 +1,70 @@
-<div class="topbar">
-	<h1>This is <%=@user.username %></h1>
-</div>
-<!-- test -->
-<div>
-USER_ID:  <%= @user.id%><br/>
-NAME: <%= @user.name%> <br/>
-PHONE: <%= @user.phone%> <br/>
-PASSWORD: <%= @user.password%><br/>
-</div>
-<!-- where privious posts shows -->
-<div class="posts">
-	POSTS
-	<% if @user.posts %>
-		<div>
-			<% @user.posts.reverse_each.each do |post| %>
-				<%= post.user_id %> 
-				<%= post.post_text %>    
-				<%= post.date %> <br/>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/account.css">
+</head>
+<body>
+	<div class="bg-img"></div>
+	<nav id="nav">
+		<ul>
+			<%if @user%>
+			<li><a href="/debug">debug</a></li>
+			<li><a href="/profile">Profile</a></li>
+			<li><a href="/account">Account</a></li>
+			<li id="log_out"><a href="/log-out">Log Out</a></li>
 			<%end%>
-		</div>
-	<%end%>
+		</ul>
+	</nav>
+	<div class="notice">
+		<%= flash[:notice] if flash[:notice] %>
+	</div>
 
-</div>
+	<div class="error">
+		<%= flash[:error] if flash[:error] %>
+	</div>
+
+	<div id="account_wrapper">
+		<div id="account">
+			<div id="account_info">
+				<h1>this is <%=@user.username %></h1>
+					<p><span>NAME</span>  <%= @user.name%></p>
+					<p><span>PHONE</span>  <%= @user.phone%></p>
+					<p><span>CITY</span>  <%= @profile.city%></p>
+					<p><span>FIELD</span> <%= @profile.field%></p>
+					<p><span>BIO</span> <br/><%= @profile.bio%></p>	
+			</div>
+		</div>
+
+			<!-- where privious posts shows -->
+		<div id="post_div">
+			<div id="posts">
+				<% if @user.posts %>				
+						<% @user.posts.reverse_each.each do |post| %>
+							<div class="indivisual">
+								<div id="post_text">
+									<p><%= post.post_text %></p>	
+								</div>
+								<div id="f_post_toobox">
+							    	<span id ="post_time">
+							    		<!-- this is where letter counter shows : future JS -->
+							    		created at <%= post.date.strftime('%c') %> 
+							    	</span>
+						    	</div>
+						    </div>
+					    <%end%>
+				<%end%>
+			</div>
+		</div>
+	</div>
+
+	<!-- SHOWING LASTest 10 USER LINK -->
+	<div id="back">
+		<a href="/account"><h2>back to your account</h2></a>
+	</div>
+
+
+</body>
+</html>
+
+
+

@@ -116,7 +116,7 @@ get "/account" do
 	@user = current_user
 	@profile = current_profile
 	# @profile = Profile.find_by(user_id: session[:user_id])
-	erb :account
+	erb :account, layout:false 
 
 end
 
@@ -139,10 +139,23 @@ post "/post_create" do
 	redirect "/account"
 end
 
+# post "/post_create/:id" do
+# 	# @post = current_user.posts.last
+# 	post = Post.create(
+# 		user_id: params[:id],
+# 		post_text: params[:post_text],
+# 		date: Time.now
+# 		)
+
+# 	# @current_post=Post.find_by(user_id: session[:user_id])
+# 	puts post.inspect
+# 	redirect "/account"
+# end
+
 get "/friend/:id" do
 	@user = User.find(params[:id])
 	@profile = Profile.find_by(user_id: params[:id])
-	erb :friends
+	erb :friends, layout:false
 end
 
 get "/delete_post/:id" do

@@ -1,0 +1,345 @@
+@font-face {
+  font-family: 'Montserrats';
+  src:  url('Montserrat-Hairline.otf') format('woff2'),
+        url('Montserrat-Light.otf') format('woff');
+}
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+/*===================================== INDEX PAGE==========================*/
+body {
+	font-family:Montserrats,sans-serif;
+	  padding: 0;
+	  margin:0;
+	  background: linear-gradient(-150deg, #3D18E6 0%, #cea2df 70%, #fecdd3 85%);
+	  background-repeat: no-repeat;
+	  background-position: center center;
+	  background-attachment: fixed;
+	  background-size: 100%;
+
+}
+
+.topbar{
+	text-transform: uppercase;
+	height: 100%;
+    background-color: white;
+}
+
+.topbar h1{
+	text-align: center;
+    padding: 0.4em;
+}
+
+
+/*===================================== ACCOUNT START==========================*/
+
+#nav {
+  /*box-shadow: 0px 1px #a8a8a8, 0px 2px #a8a8a8, 0px 3px #a8a8a8;*/
+  position: relative;
+  left: 20px;
+  right: 0;
+}
+
+#nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+}
+
+#nav ul li a {
+  font-family: Montserrat;
+  font-size: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #282828;
+  padding: 1em 0 0 0;
+  transition: .3s all ease-in;
+  margin: 0 0.5em;
+}
+
+#nav ul li a:hover {
+  color: yellow;
+  box-shadow: 0px 3px yellow;
+}
+
+
+
+ul, li{
+	list-style: none;
+	padding: 0;
+}
+
+#account_wrapper{
+	position: relative;
+    width: 965px;
+    margin: 0 auto;
+    margin-top: 170px;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+}
+#account{
+	width: 265px;
+    text-transform: capitalize;
+    height: 100%;
+    float: left;
+}
+
+#account_info{
+	margin: 0;
+    color: white;
+    font-size: 17px;
+    font-weight:300; 
+}
+
+#account_info h1{
+	margin: 0;
+	font-weight:300; 
+	font-size: 30px;
+	border-bottom: solid 3px;
+    padding-bottom: 3px;
+}
+
+#account_info p span{
+	margin: 0;
+	font-weight:700;
+  font-size: 15px; 
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+#bio{
+  font-family: 'Montserrats', sans-serif;
+  font-weight:hairline; 
+  font-size: 15px;
+}
+
+#bio span{
+  margin: 0;
+  font-weight:700;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px; 
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+#destroy{
+	display: block;
+	text-transform: uppercase;
+	padding: 6px 14px;
+/*	float: left;
+*/}
+
+#post_div{
+	width: 540px;
+    float: left;
+    margin-left:160px;
+    margin-top: 40px;
+}
+.post_create{
+	height: 100%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.post_type{
+	border: 1px solid white;
+}
+
+.post_type textarea{
+	width: 475px;
+    height: 3em;
+    line-height: 1em;
+    resize:vertical;
+}
+
+#textarea{
+	outline: none;
+	padding: 3%;
+	width: 94%;
+	resize: none;
+	border: none;
+	background: transparent;
+	color: white;
+  vertical-align: middle;
+  font-family: 'Montserrats', sans-serif;
+	font-size: 15px;
+}
+textarea::-webkit-input-placeholder {  color: white;}
+
+#post_toobox{
+	text-align: right;
+    height: 75px;
+    padding: 20px 0;
+    height: 100%;
+}
+
+#post_time{
+	float: left;
+	font-size: 13px;
+	margin-top: 10px;
+
+}
+#post_counter{
+	font-size: 15px;
+	letter-spacing: 0.1em;
+	margin-right: 10px;
+	color: white;
+
+}
+
+#posts{
+	width: 100%;
+	height: 100%;
+	width: 540px;
+}	
+
+.indivisual{
+	border-bottom: 2px solid white;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 50px;
+    color: white;
+}
+
+#post_text{
+	text-align: left;
+	color: white;
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
+}
+
+#lastest_ten_user{
+	width: 160px;
+	position: fixed;
+	top: 260px;
+	right: 0;
+    text-align: left;
+    color: white;
+    font-size: 15px;
+    clear: both;
+}
+
+#lastest_ten_user h2{
+	border-top: solid 3px;
+    padding-top: 1em;
+    font-size: 15px;
+    text-transform: uppercase;
+
+}
+
+#lastest_ten_user a{
+	color: white;
+	text-decoration: none;
+	text-transform: capitalize;
+	letter-spacing: 1px;
+}
+#lastest_ten_user a:hover{
+	text-decoration: none;
+	color: yellow;
+}
+
+#lastest_ten_user li{
+    padding: 10px 0;
+}
+
+#post_delete{
+	border: none;
+}
+
+button{
+	text-transform: uppercase;
+  	background-color: transparent;
+    color: white;
+    padding: 6px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+button:hover {
+  color: yellow;
+  border: 1px solid yellow;
+}
+
+button a{
+	text-decoration: none;
+	color: white;
+	font-size: 13px;
+}
+
+button a:hover{
+	text-decoration: none;
+	color: yellow;
+	font-size: 13px;
+}
+
+#back{
+	width: 160px;
+	position: fixed;
+	top: 260px;
+	right: 0;
+    text-align: left;
+    color: white;
+    font-size: 15px;
+    clear: both;
+}
+
+#back h2{
+	border-top: solid 3px;
+    padding-top: 1em;
+    font-size: 15px;
+    text-transform: uppercase;
+
+}
+
+#back a{
+	color: white;
+	text-decoration: none;
+	text-transform: capitalize;
+	letter-spacing: 1px;
+}
+#back a:hover{
+	text-decoration: none;
+	color: yellow;
+}
+
+#back li{
+    padding: 10px 0;
+}
+#f_post_toobox{
+	text-align: right;
+    height: 75px;
+    padding: 20px 0;
+    height: 100%;
+    margin-bottom: 20px;
+}
+#f_post_div{
+	margin-top:-30px;
+	width: 540px;
+    float: left;
+    margin-left:160px;
+}
+
+/*===================================== ACCOUNT END==========================*/
+
+#bg-blend{
+	width: 500px;
+    height: 500px;
+    background-image: url("/assets/BG_01.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: purple;
+    background-blend-mode: multiply;
+    opacity: 0.6;
+    z-index: -3;
+    display: inline-block;
+    position: fixed;
+    left: 100px;
+}
+
+
